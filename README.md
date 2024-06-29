@@ -1,2 +1,1 @@
-# IATrabalhoFinal
-Desenvolvimento de IA para classificação de produto por imagem
+# bject_detection_project
