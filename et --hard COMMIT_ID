@@ -1,0 +1,66 @@
+[33mcommit 1b07a8c21f8b6d0345b268c096a56480c14c2d9e[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mGustavo-Parte[m[33m)[m
+Author: T4T4V0 <gutoegui99@gmail.com>
+Date:   Sat Jun 29 19:01:09 2024 -0300
+
+    Gustavo-commit-1
+
+[33mcommit 396f1b67feb8d76f7f842e9ed437eda24d742cc9[m
+Author: T4T4V0 <gutoegui99@gmail.com>
+Date:   Sat Jun 29 18:47:52 2024 -0300
+
+    Removendo primary_model.h5 temporariamente
+
+[33mcommit 47dad98f1ac61775271ab051f992cf3233a78dc3[m
+Author: T4T4V0 <gutoegui99@gmail.com>
+Date:   Sat Jun 29 18:41:33 2024 -0300
+
+    Rastreando todos os arquivos .h5 com Git LFS
+
+[33mcommit 43f6df5255be645ff909d1ef858af89e58c42e57[m
+Author: T4T4V0 <gutoegui99@gmail.com>
+Date:   Sat Jun 29 18:38:41 2024 -0300
+
+    Rastreando todos os arquivos .h5 com Git LFS
+
+[33mcommit 1e2c8b537982ea27cc62c7318bc12cc485cdf3dc[m
+Author: T4T4V0 <gutoegui99@gmail.com>
+Date:   Sat Jun 29 18:33:36 2024 -0300
+
+    Rastreando todos os arquivos .h5 com Git LFS
+
+[33mcommit 0ca15837c96167397c8b73ebf739f75751c39b22[m
+Author: T4T4V0 <gutoegui99@gmail.com>
+Date:   Sat Jun 29 18:20:49 2024 -0300
+
+    Adicionando arquivos grandes com Git LFS
+
+[33mcommit 34f0d7f46002f0538959f26d767b7875507000cb[m
+Author: T4T4V0 <gutoegui99@gmail.com>
+Date:   Sat Jun 29 18:15:42 2024 -0300
+
+    Commits do Gustavo
+
+[33mcommit bdd0c33a6e20ba8df41054126f04e9e94d019e44[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;31morigin/Gustavo-Parte[m[33m, [m[1;32mmain[m[33m)[m
+Author: AlandaSilvaCarneiro <82735697+AlandaSilvaCarneiro@users.noreply.github.com>
+Date:   Thu Jun 27 21:14:54 2024 -0300
+
+    funçao do modelo alexnet completa
+
+[33mcommit 1aa69d7fc150d6f1c5817ac1a33e9154578e0247[m
+Merge: b3b206c e70a9a0
+Author: AlandaSilvaCarneiro <82735697+AlandaSilvaCarneiro@users.noreply.github.com>
+Date:   Wed Jun 26 22:12:40 2024 -0300
+
+    Merge branch 'main' of https://github.com/AlandaSilvaCarneiro/IATrabalhoFinal
+
+[33mcommit b3b206c9ba02d7798005655b1b64bf13bed3a015[m
+Author: AlandaSilvaCarneiro <82735697+AlandaSilvaCarneiro@users.noreply.github.com>
+Date:   Wed Jun 26 22:11:15 2024 -0300
+
+    Primeiro parte do modelo Alexnet
+
+[33mcommit e70a9a07403860de79c7dcc6e065baf53b6a07ac[m
+Author: AlandaSilvaCarneiro <82735697+AlandaSilvaCarneiro@users.noreply.github.com>
+Date:   Tue Jun 25 20:47:45 2024 -0300
+
+    Initial commit
