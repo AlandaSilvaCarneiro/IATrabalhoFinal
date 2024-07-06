@@ -1,9 +1,11 @@
 import tensorflow as tf
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
+import os
 
 # Diretórios de dados
-train_dir = 'datasets/train/packages'
-validation_dir = 'datasets/validation/packages'
+base_dir = 'C:/Users/gutoe/Desktop/IATrabalhoFinal'
+train_dir = os.path.join(base_dir, 'datasets/train/packages')
+validation_dir = os.path.join(base_dir, 'datasets/validation/packages')
 
 # Pré-processamento dos dados
 train_datagen = ImageDataGenerator(rescale=1./255)
@@ -33,7 +35,7 @@ model = tf.keras.models.Sequential([
     tf.keras.layers.MaxPooling2D(2, 2),
     tf.keras.layers.Flatten(),
     tf.keras.layers.Dense(512, activation='relu'),
-    tf.keras.layers.Dense(9, activation='softmax')  # Número de classes de pacotes
+    tf.keras.layers.Dense(9, activation='softmax')  # Número de classes ajustado para 9
 ])
 
 model.compile(loss='categorical_crossentropy',
@@ -44,9 +46,9 @@ model.compile(loss='categorical_crossentropy',
 history = model.fit(
     train_generator,
     steps_per_epoch=100,
-    epochs=30,
+    epochs=20,
     validation_data=validation_generator,
     validation_steps=50)
 
 # Salvando o modelo
-model.save('models/packages_model.h5')
+model.save(os.path.join(base_dir, 'models/packages_model.h5'))

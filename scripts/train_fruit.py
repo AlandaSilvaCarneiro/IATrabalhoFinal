@@ -1,9 +1,11 @@
 import tensorflow as tf
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
+import os
 
 # Diretórios de dados
-train_dir = 'datasets/train/fruit'
-validation_dir = 'datasets/validation/fruit'
+base_dir = 'C:/Users/gutoe/Desktop/IATrabalhoFinal'
+train_dir = os.path.join(base_dir, 'datasets/train/fruit')
+validation_dir = os.path.join(base_dir, 'datasets/validation/fruit')
 
 # Pré-processamento dos dados
 train_datagen = ImageDataGenerator(rescale=1./255)
@@ -44,9 +46,9 @@ model.compile(loss='categorical_crossentropy',
 history = model.fit(
     train_generator,
     steps_per_epoch=100,
-    epochs=30,
+    epochs=20,
     validation_data=validation_generator,
     validation_steps=50)
 
 # Salvando o modelo
-model.save('models/fruit_model.h5')
+model.save(os.path.join(base_dir, 'models/fruit_model.h5'))

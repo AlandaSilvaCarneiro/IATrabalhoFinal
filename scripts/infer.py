@@ -3,7 +3,6 @@ import numpy as np
 from tensorflow.keras.preprocessing import image
 import os
 
-
 # Função para carregar e pré-processar a imagem
 def load_and_preprocess_image(img_path, target_size=(224, 224)):
     try:
@@ -16,7 +15,6 @@ def load_and_preprocess_image(img_path, target_size=(224, 224)):
         print(f"Error loading image: {e}")
         return None
 
-
 # Função para prever a classe
 def predict_class(model, img_array, class_names):
     try:
@@ -28,7 +26,6 @@ def predict_class(model, img_array, class_names):
     except Exception as e:
         print(f"Error predicting class: {e}")
         return None, None
-
 
 # Função principal de inferência
 def infer(model_path, img_path, class_names):
@@ -43,39 +40,26 @@ def infer(model_path, img_path, class_names):
         print(f"Error during inference: {e}")
         return None, None
 
-
 if __name__ == "__main__":
-    img_path = 'path/to/your/image.jpg'  # Atualize este caminho
+    img_path = 'C:/Users/gutoe/Desktop/IATrabalhoFinal/path/to/your/image.jpg'  # Atualize este caminho
 
     # Inferência para a classificação primária
-    primary_model_path = 'path/to/models/model_primary.h5'  # Atualize este caminho
+    primary_model_path = 'C:/Users/gutoe/Desktop/IATrabalhoFinal/models/primary_model.h5'  # Atualize este caminho
     primary_class_names = ['Fruta', 'Vegetais', 'Pacotes']
     primary_class, primary_confidence = infer(primary_model_path, img_path, primary_class_names)
     if primary_class is None:
         print("Error in primary classification.")
-        exit(1)
-
-    print(f'Primary Classification: {primary_class} ({primary_confidence:.4f})')
-
-    if primary_class == 'Fruta':
-        model_path = 'path/to/models/model_fruit.h5'  # Atualize este caminho
-        class_names = ['Abacate', 'Abacaxi', 'Ameixa', 'Banana', 'Kiwi', 'Laranja', 'Lima', 'Limão', 'Maçã', 'Mamão',
-                       'Manga', 'Maracujá', 'Melão', 'Nectarina', 'Pera', 'Pêssego', 'Romã', 'Satsuma', 'Toranja']
-    elif primary_class == 'Vegetais':
-        model_path = 'path/to/models/model_vegetables.h5'  # Atualize este caminho
-        class_names = ['Abobrinha', 'Alho', 'Alho-poró', 'Aspargos', 'Batata', 'Berinjela', 'Beterraba', 'Cebola',
-                       'Cenouras', 'Cogumelo', 'Gengibre', 'Pepino', 'Pimentão', 'Repolho', 'Tomate']
-    elif primary_class == 'Pacotes':
-        model_path = 'path/to/models/model_packages.h5'  # Atualize este caminho
-        class_names = ['Creme de Leite', 'Iogurte', 'Iogurte de Aveia', 'Iogurte de Soja', 'Leite', 'Leite Azedo',
-                       'Leite de Aveia', 'Leite de Soja', 'Suco']
     else:
-        print("Unknown primary classification.")
-        exit(1)
+        print(f"Primary Classification: {primary_class} with confidence {primary_confidence}")
 
-    specific_class, specific_confidence = infer(model_path, img_path, class_names)
-    if specific_class is None:
-        print("Error in specific classification.")
-        exit(1)
+    # Inferência para classificação detalhada se a classe primária for 'Fruta'
+    if primary_class == 'Fruta':
+        fruit_model_path = 'C:/Users/gutoe/Desktop/IATrabalhoFinal/models/fruit_model.h5'  # Atualize este caminho
+        fruit_class_names = [
+            'Abacate', 'Abacaxi', 'Ameixa', 'Banana', 'Kiwi', 'Laranja', 'Lima', 'Limão', 'Maçã', 'Mamão',
+            'Manga', 'Maracujá', 'Melão', 'Nectarina', 'Pera', 'Pêssego', 'Romã', 'Satsuma', 'Toranja', 'Melancia'
+        ]
+        fruit_class, fruit_confidence = infer(fruit_model_path, img_path, fruit_class_names)
+        print(f"Fruit Classification: {fruit_class} with confidence {fruit_confidence}")
 
-    print(f'Specific Classification: {specific_class} ({specific_confidence:.4f})')
+    # Adicione inferências para Vegetais e Pacotes se necessário

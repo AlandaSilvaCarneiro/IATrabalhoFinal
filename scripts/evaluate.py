@@ -20,23 +20,23 @@ def evaluate_model(model_path, validation_dir, class_names, image_size=(224, 224
 
 # Exemplo de uso
 if __name__ == "__main__":
-    base_validation_dir = 'path/to/validation/images'  # Atualize este caminho
+    base_validation_dir = 'C:/Users/gutoe/Desktop/IATrabalhoFinal/datasets/validation'
 
-    evaluate_model('path/to/models/model_primary.h5', base_validation_dir, [
+    evaluate_model('C:/Users/gutoe/Desktop/IATrabalhoFinal/models/primary_model.h5', base_validation_dir, [
         'Fruta', 'Vegetais', 'Pacotes'
     ])
 
-    evaluate_model('path/to/models/model_fruit.h5', base_validation_dir + '/Fruta', [
+    evaluate_model('C:/Users/gutoe/Desktop/IATrabalhoFinal/models/fruit_model.h5', base_validation_dir + '/Fruta', [
         'Abacate', 'Abacaxi', 'Ameixa', 'Banana', 'Kiwi', 'Laranja', 'Lima', 'Limão', 'Maçã', 'Mamão',
-        'Manga', 'Maracujá', 'Melão', 'Nectarina', 'Pera', 'Pêssego', 'Romã', 'Satsuma', 'Toranja'
+        'Manga', 'Maracujá', 'Melão', 'Nectarina', 'Pera', 'Pêssego', 'Romã', 'Satsuma', 'Toranja', 'Melancia'
     ])
 
-    evaluate_model('path/to/models/model_vegetables.h5', base_validation_dir + '/Vegetais', [
+    evaluate_model('C:/Users/gutoe/Desktop/IATrabalhoFinal/models/vegetables_model.h5', base_validation_dir + '/Vegetais', [
         'Abobrinha', 'Alho', 'Alho-poró', 'Aspargos', 'Batata', 'Berinjela', 'Beterraba', 'Cebola',
         'Cenouras', 'Cogumelo', 'Gengibre', 'Pepino', 'Pimentão', 'Repolho', 'Tomate'
     ])
 
-    evaluate_model('path/to/models/model_packages.h5', base_validation_dir + '/Pacotes', [
+    evaluate_model('C:/Users/gutoe/Desktop/IATrabalhoFinal/models/packages_model.h5', base_validation_dir + '/Pacotes', [
         'Creme de Leite', 'Iogurte', 'Iogurte de Aveia', 'Iogurte de Soja', 'Leite', 'Leite Azedo',
         'Leite de Aveia', 'Leite de Soja', 'Suco'
     ])
